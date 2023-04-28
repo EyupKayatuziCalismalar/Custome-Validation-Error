@@ -1,0 +1,63 @@
+﻿@model WebApplication3.Models.Kayit
+
+@{
+    ViewData["Title"] = "Soru2";
+}
+
+<h1>Soru2</h1>
+
+<h4>Kayit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Soru2" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mail"  class="control-label"></label>
+                <input asp-for="Mail"  id="mail" class="form-control" />
+                <span asp-validation-for="Mail" asp-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdenficationNumber" class="control-label"></label>
+                <input asp-for="IdenficationNumber" class="form-control" />
+                <span asp-validation-for="IdenficationNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserCode" class="control-label"></label>
+                <input asp-for="UserCode" class="form-control" />
+                <span asp-validation-for="UserCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RepeatPassword" class="control-label"></label>
+                <input asp-for="RepeatPassword" class="form-control" />
+                <span asp-validation-for="RepeatPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

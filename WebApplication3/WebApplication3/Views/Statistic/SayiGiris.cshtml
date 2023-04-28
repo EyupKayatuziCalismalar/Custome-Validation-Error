@@ -1,0 +1,12 @@
+﻿@model Sayilar
+<form asp-action="SayiGiris">
+    <div class="mb-3">
+        <label asp-for="kucukSayi">LowerBound</label>
+        <input type="text" asp-for="kucukSayi">
+    </div>
+    <div class="mb-3">
+        <label asp-for="buyukSayi">UpperBound</label>
+        <input type="text" asp-for="buyukSayi">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
